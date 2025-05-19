@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/**/*.ts",
+      "use": "@vercel/node",
+      "config": {
+        "bundle": true,
+        "runtimes": ["edge"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/pages/api/index.ts"
+    }
+  ]
+}
