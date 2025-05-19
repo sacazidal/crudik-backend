@@ -22,11 +22,11 @@ app.get("/", (req, reply) => {
   reply.send({ hello: "world" });
 });
 
-// await app.addHook("onRequest", (req, reply, done) => {
-//   console.log(`[${req.method}] ${req.url}`);
-//   console.log("=> Headers:", req.headers);
-//   console.log("=> Response headers:", reply.getHeaders());
-//   done();
-// });
+await app.addHook("onRequest", (req, reply, done) => {
+  console.log(`[${req.method}] ${req.url}`);
+  console.log("=> Headers:", req.headers);
+  console.log("=> Response headers:", reply.getHeaders());
+  done();
+});
 
 export { app };
