@@ -10,7 +10,7 @@
     "migrate:dev": "prisma migrate dev --name init",
     "migrate:deploy": "prisma migrate deploy",
     "prisma:studio": "prisma studio",
-    "start": "node dist/server.js"
+    "start": "node public/server.js"
   },
   "keywords": [],
   "author": "",
