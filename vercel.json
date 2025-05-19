@@ -5,15 +5,14 @@
       "src": "src/**/*.ts",
       "use": "@vercel/node",
       "config": {
-        "bundle": true,
-        "runtimes": ["edge"]
+        "bundle": true
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/pages/api/index.ts"
+      "dest": "/src/api/index.ts"
     }
   ]
 }
